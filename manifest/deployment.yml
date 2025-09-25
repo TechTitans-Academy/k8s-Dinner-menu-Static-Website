@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: menu-dinner
-          image: techtitansacademy/menu:latest   # <-- replace with your image
+          image: techtitansacademy/dinner-menu-ui:latest   # <-- replace with your image
           imagePullPolicy: Always
           ports:
             - containerPort: 8888
