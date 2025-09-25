@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: menu-dinner
+  labels:
+    app: menu-dinner
+spec:
+  replicas: 6
+  selector:
+    matchLabels:
+      app: menu-dinner
+  template:
+    metadata:
+      labels:
+        app: menu-dinner
+    spec:
+      containers:
+        - name: menu-dinner
+          image: techtitansacademy/menu:latest   # <-- replace with your image
+          ports:
+            - containerPort: 8888
